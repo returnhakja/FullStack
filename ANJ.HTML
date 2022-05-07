@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div class="top-bar con">
+        <nav class="menu-box-1">
+            <ul class="row">
+                <li class="cell">
+                    <a href="#" class="block">MENU</a>
+                    <div class="relative"><!-- 서브메뉴를 위한 유령의 집 -->
+                        <div><!-- overflow:hidden; 때문에 존재한다. -->
+                            <ul>
+                                <li><a class="block" href="#">New Menu</a></li>
+                                <li><a class="block" href="#">Coffee</a></li>
+                                <li><a class="block" href="#">Angel-in-snow</a></li>
+                                <li><a class="block" href="#">Tea ＆ Beverages</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cell">
+                    <a href="#" class="block">CARD</a>
+                    <div class="relative">
+                        <div>
+                            <ul>
+                                <li><a class="block" href="#">엔제리너스 카드란</a></li>
+                                <li><a class="block" href="#">엔제리너스 카드 앱</a></li>
+                                <li><a class="block" href="#" title="엔제리너스 카드 앱 등록/조회">엔제리너스 카드 앱 등록/조회</a></li>
+                                <li><a class="block" href="#">카드 Q＆A 모아보기</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cell">
+                    <a href="#" class="block">EVENT</a>
+                    <div class="relative">
+                        <div>
+                            <ul>
+                                <li><a class="block" href="#">진행중인 이벤트</a></li>
+                                <li><a class="block" href="#">종료된 이벤트</a></li>
+                                <li><a class="block" href="#">당첨자 발표</a></li>
+                                <li><a class="block" href="#">그룹 옴니채널</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cell logo-cell"><a href="#" class="block img-box"><img src="http://www.angelinus.com/ImagesNew/gnb/logoBg.png" alt=""></a></li>
+                <li class="cell">
+                    <a href="#" class="block">ABOUT US</a>
+                    <div class="relative">
+                        <div>
+                            <ul>
+                                <li><a class="block" href="#">엔제리너스 소개</a></li>
+                                <li><a class="block" href="#">엔제리너스 BI</a></li>
+                                <li><a class="block" href="#">엔제리너스 매장</a></li>
+                                <li><a class="block" href="#">Specialty Coffee</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cell">
+                    <a href="#" class="block">OUR COFFEE</a>
+                    <div class="relative">
+                        <div>
+                            <ul>
+                                <li><a class="block" href="#">A cup of perfection</a></li>
+                                <li><a class="block" href="#">Whole Bean</a></li>
+                                <li><a class="block" href="#">Coffee Class</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="cell">
+                    <a href="#" class="block">STORE</a>
+                    <div class="relative">
+                        <div>
+                            <ul>
+                                <li><a class="block" href="#">매장찾기</a></li>
+                                <li><a class="block" href="#">케이터링 서비스</a></li>
+                                <li><a class="block" href="#">특설매장 서비스</a></li>
+                                <li><a class="block" href="#">이달의 매장음악</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- 유령의 집, 단순한 기준점, 높이 : 항상 0 -->
+        <div class="sub-menu-bg relative">
+            <!-- 서브메뉴배경 래퍼, 존재이유 : overflow:hidden;, 평소 높이 : 0, 활성화 높이 : 470px -->
+            <div>
+                <!-- 서브메뉴배경, 높이 : 항상 470px, 평소 transform:translateY(-100%), 활성화 transform:translateY(0) -->
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!--<div style="height:10px; background-color:red;"></div> -->
+ 
+</body>
+<style>
+    /* 폰트 불러오기 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 노말라이즈 */
+body, ul, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+/* 라이브러리 */
+.con {
+    margin:0 auto;
+}
+
+.row::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.cell {
+    float:left;
+    box-sizing:border-box;
+}
+
+.cell-right {
+    float:right;
+    box-sizing:border-box;
+}
+
+.block {
+    display:block;
+}
+
+.img-box > img {
+    width:100%;
+    display:block;
+}
+
+.relative {
+    position:relative;
+}
+
+/* 커스텀 */
+.con {
+    width:1116px;
+}
+
+/* 탑바 시작 */
+.top-bar {
+    margin-top:30px;
+}
+
+/* 탑바 - 메뉴 박스 1 시작 */
+.top-bar > .menu-box-1 > ul > li:not(.logo-cell) {
+    width:calc((100% - 216px) / 6);
+}
+
+.top-bar > .menu-box-1 > ul > li:not(.logo-cell) > a {
+    background-color:#484d50;
+    padding:13px 0;
+    color:gold;
+    font-weight:bold;
+    text-align:center;
+}
+
+.top-bar > .menu-box-1 > ul > li:not(.logo-cell):hover > a {
+    background-color:#afafaf;
+}
+
+.top-bar > .menu-box-1 > ul > li.logo-cell > a {
+    margin-bottom:-9px;
+    position:relative;
+    z-index:1;
+}
+
+/* 탑바 - 서브메뉴배경 시작 */
+
+/* 탑바 - 서브메뉴배경의 래퍼(wrapper) */
+.top-bar > .sub-menu-bg > div {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    overflow:hidden;
+    height:0;
+    transition:height 0.3s;
+}
+
+/* 탑바 - 서브메뉴배경 */
+ .top-bar > .sub-menu-bg > div > div {
+    position:absolute;
+    top:0;
+    left:10px;
+    width:calc(100% - 20px);
+    height:470px;
+    background-image:url(http://www.angelinus.com/ImagesNew/gnb/depth2FixedBg.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    transform:translateY(-100%);
+    transition:transform 0.3s;
+}  
+
+.top-bar > .sub-menu-bg > div > div::before, .top-bar > .sub-menu-bg > div > div::after {
+    display:block;
+    content:"";
+    top:0;
+    left:-10px;
+    width:0;
+    height:0;
+    border-top:10px solid #484d50;
+    border-left:10px solid transparent;
+    z-index:-1;
+    position:absolute;
+}
+
+.top-bar > .sub-menu-bg > div > div::after {
+    left:auto;
+    right:-10px;
+    transform:rotateY(180deg);
+}
+
+.top-bar:hover > .sub-menu-bg > div > div {
+    transform:translateY(0);
+}
+
+.top-bar:hover > .sub-menu-bg > div {
+    height:470px;
+}
+
+/* 탑바 - 서브메뉴 - 시작 */
+.top-bar > .menu-box-1 > ul > li:first-child > div {
+    margin-left:10px;
+}
+
+.top-bar > .menu-box-1 > ul > li:last-child > div {
+    margin-right:10px;
+}
+
+.top-bar > .menu-box-1 > ul > li > div {
+    z-index:1;
+}
+
+.top-bar > .menu-box-1 > ul > li > div > div {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:0;
+    overflow:hidden;
+    transition:height 0.3s;
+}
+
+.top-bar:hover > .menu-box-1 > ul > li > div > div {
+    height:470px;
+}
+
+.top-bar > .menu-box-1 > ul > li > div > div > ul {
+    height:470px;
+    transform:translateY(-100%);
+    transition:transform 0.3s;
+}
+
+.top-bar:hover > .menu-box-1 > ul > li > div > div > ul {
+    transform:translateY(0);
+}
+
+.top-bar > .menu-box-1 > ul > li > div > div > ul > li > a {
+    color:white;
+    padding:8px 8px;
+    white-space:nowrap;
+    font-size:0.9rem;
+    overflow-x:hidden;
+    text-overflow:ellipsis;
+}
+
+.top-bar > .menu-box-1 > ul > li > div > div > ul > li:hover > a {
+    background-color:rgba(0,0,0,0.2);
+    color:white;
+    text-decoration:underline;
+}
+
+/* 탑바 - 메뉴 박스 1 끝 */
+/* 탑바 끝 */
+</style>
+</html>
