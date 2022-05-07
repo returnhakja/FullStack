@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_input</title>
+</head>
+<body>
+    <form action="">
+        ID : <input type="text" placeholder="아이디 입력" > <br>
+        PW : <input type="password" placeholder="비밀번호 입력"><br>
+        <button type="submit">클릭</button>
+    </form>
+
+    <!-- 셀렉트 박스 value가 실제 서버로 넘어가는 값이 된다-->
+    <form>
+        <select name="month" id="">
+            <option value="" selected>월</option>
+            <option  value="1">1</option>
+            <option value="2">2</option>
+            <option>3</option>
+        </select>
+    </form>
+    <hr>
+    <!-- 라디오 박스 -->
+    <form> <!-- name값을 동일하게 주면 하나만 선택하게 해준다-->
+        <input type="radio" name="sexual">남
+        <input type="radio" name="sexual">여
+        <input type="radio" name="sexual">둘다아님
+    </form>
+    <hr>
+    <form> <!-- 체크박스는 name이 동일해서 다 선택 가능 -->
+        <input type="checkbox" name="genre"> 공포
+        <input type="checkbox" name="genre"> 액션
+        <input type="checkbox" name="genre"> 드라마
+    </form>
+
+        <!-- 전달 -->
+    <form action="https://search.naver.com/search.naver?" method="post">
+        N : <input type="text" name="query">
+        <input type="submit" value="검색">
+    </form>
+
+    <form action="https://www.google.co.kr/search?">
+        G : <input type="text" name="query">
+        <input type="submit" value="검색">
+    </form>
+    <hr>
+    <video src="/multimedia/TeachableMachine.mp4" type="video/mp4" controls width="480px" autoplay>
+    </video>
+    
+</body>
+</html>
